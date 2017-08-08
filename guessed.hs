@@ -16,6 +16,24 @@ main = do
   print randNumber
   -- User Input
   putStrLn("Your guess: ")
-  guess <- getLine
+  userGuess <- getLine
+  userGuessInt <- getInt userGuess
+  if userGuessInt == randNumber
+    then putStrLn("Your guess " ++ userGuess ++ " was right!")
+    else putStrLn("Sorry, thats not was i thought")
   -- End expression
   putStrLn("Ready.")
+
+
+-- Function to convert [Char] to Int
+getInt n
+    | n == "1" = return 1
+    | n == "2" = return 2
+    | n == "3" = return 3
+    | n == "4" = return 4
+    | n == "5" = return 5
+    | n == "6" = return 6
+    | n == "7" = return 7
+    | n == "8" = return 8
+    | n == "9" = return 9
+    | n == "10" = return 10
