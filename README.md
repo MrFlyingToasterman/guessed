@@ -1,11 +1,11 @@
-# guessed
+# Guessed
 A small numbers guessing game written in Haskell.
 
 # Compile
-Compile it via Glasgow Haskell Compiler (ghc):
-`$ ghc guessed.hs -o guessed`
-Execute it:
-`./guessed`
+Compile it via Glasgow Haskell Compiler (ghc): <br>
+`$ ghc guessed.hs -o guessed` <br> <br>
+Execute it: <br>
+`./guessed` <br> <br>
 
 # License
 ![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)
