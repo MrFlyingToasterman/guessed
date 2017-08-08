@@ -4,6 +4,7 @@
 import System.IO
 import Data.Char
 import System.Random
+import Text.Printf
 
 -- Main Function (Programm Start)
 main = do
@@ -12,15 +13,13 @@ main = do
   -- Create a Random Int
   genNumber <- getStdGen
   let ( randNumber , newGen ) = randomR (1,10) genNumber :: (Int,StdGen)
-  -- Debug: Print Number
-  print randNumber
   -- User Input
   putStrLn("Your guess: ")
   userGuess <- getLine
   userGuessInt <- getInt userGuess
   if userGuessInt == randNumber
     then putStrLn("Your guess " ++ userGuess ++ " was right!")
-    else putStrLn("Sorry, thats not was i thought")
+    else putStrLn $ printf "Sorry, the correct answer was %d" randNumber
   -- End expression
   putStrLn("Ready.")
 
